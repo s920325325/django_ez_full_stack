@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-in Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .user-info {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .user-info h1 {
+            margin-bottom: 10px;
+        }
+        .user-info p {
+            margin: 5px 0;
+        }
+        .company-listing {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .company-listing label {
+            font-weight: bold;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+        .stock-button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            margin: 20px auto;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .stock-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    
+    <div class="user-data">
+        <label>Username:</label>
+        <span id="username"></span>
+    </div>
+
+    <div class="user-data">
+        <label>Email:</label>
+        <span id="email"></span>
+    </div>
+
+    <script>
+        // 解析 URL 中的參數
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username');
+        const email = params.get('email');
+
+        // 將資料填入 HTML 元素中
+        document.getElementById('username').textContent = username;
+        document.getElementById('email').textContent = email;
+    </script>
+
+    <!-- 加入按鈕，連結到顯示前10大收盤價股票的頁面 -->
+    <a href="http://localhost:8000/stockdata/" class="stock-button">收盤價前10大的股票</a>
+</body>
+</html>

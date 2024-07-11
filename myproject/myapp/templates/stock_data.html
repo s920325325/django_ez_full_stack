@@ -1,0 +1,26 @@
+<!-- stock_data.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 10 Stocks by Closing Price</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .stock-table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 10 Stocks by Closing Price</h1>
+
+    <div class="stock-table">
+        <!-- 將 Python 代碼執行結果作為 HTML 表格顯示 -->
+        {{ table_html | safe }}
+    </div>
+</body>
+</html>

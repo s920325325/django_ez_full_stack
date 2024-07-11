@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Failed</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+    <script>
+        // 自動跳轉函數
+        function redirectToSignup() {
+            setTimeout(function() {
+                window.location.href = 'http://127.0.0.1:8000/signup/';  // 或者是您原始的 signup.html URL
+            }, 3000);  // 3 秒後跳轉
+        }
+
+        // 當文檔準備就緒時開始自動跳轉
+        document.addEventListener('DOMContentLoaded', redirectToSignup);
+    </script>
+</head>
+<body>
+    <h1>Sign Up Failed</h1>
+    <p class="error-message">Sorry, Username or Email was wrong or repeated. Please try again later.</p>
+    <p>Redirecting back to sign up page in 3 seconds...</p>
+    <!-- 添加一個超連結，讓用戶手動點擊返回 -->
+    <p>Alternatively, you can <a href="http://127.0.0.1:8000/signup/">click here</a> to go back immediately.</p>
+</body>
+</html>

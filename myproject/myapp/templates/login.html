@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form method="post" action="http://127.0.0.1:8001/signin">
+        <!-- 登錄表單內容可以在這裡添加 -->
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+    <p><a href="{% url 'index' %}">Home</a></p>
+</body>
+</html>
